@@ -5,10 +5,8 @@ const MOVE_SPEED = 1000
 const ROCKET_OFFSET = 80
 
 var rocket_scene = preload("res://scenes/rocket.tscn")
-var rocket_node
+@onready var rocket_node = $RocketContainer
 
-func _ready():
-	rocket_node = get_node("RocketContainer")
 
 func _process(delta):
 	if Input.is_action_just_pressed("shoot"):
