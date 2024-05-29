@@ -17,12 +17,4 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	# constrain movement to be within the screen
-	var screen_rect = get_viewport_rect().size
-	if global_position.x < 0:
-		global_position.x = 0
-	elif global_position.x > screen_rect.x:
-		global_position.x = screen_rect.x
-	if global_position.y < 0:
-		global_position.y = 0
-	elif global_position.y > screen_rect.y:
-		global_position.y = screen_rect.y
+	global_position = global_position.clamp(Vector2(0, 0), get_viewport_rect().size)
