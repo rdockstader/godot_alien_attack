@@ -2,6 +2,17 @@ extends CharacterBody2D
 
 # constants
 const MOVE_SPEED = 1000
+const ROCKET_OFFSET = 80
+
+var rocket_scene = preload("res://scenes/rocket.tscn")
+var rocket_node
+
+func _ready():
+	rocket_node = get_node("RocketContainer")
+
+func _process(delta):
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
 
 func _physics_process(delta):
 	# use inputs to control character body
@@ -18,3 +29,9 @@ func _physics_process(delta):
 	
 	# constrain movement to be within the screen
 	global_position = global_position.clamp(Vector2(0, 0), get_viewport_rect().size)
+
+func shoot():	
+	var rocket_instance = rocket_scene.instantiate()
+	rocket_instance.global_position = global_position
+	rocket_instance.global_position.x += ROCKET_OFFSET
+	rocket_node.add_child(rocket_instance)
