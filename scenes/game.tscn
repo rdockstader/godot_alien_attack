@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://di4attru40wo0"]
+[gd_scene load_steps=4 format=3 uid="uid://di4attru40wo0"]
 
 [ext_resource type="Texture2D" uid="uid://gsdx8r4quy1b" path="res://assets/textures/bg.png" id="1_l8x21"]
 [ext_resource type="PackedScene" uid="uid://bivbxr4nxwyf4" path="res://scenes/player.tscn" id="2_korrn"]
+[ext_resource type="PackedScene" uid="uid://br46wyrsljtd1" path="res://scenes/enemy_spawner.tscn" id="4_4r3nb"]
 
 [node name="Game" type="Node2D"]
 
@@ -13,3 +14,5 @@ stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_korrn")]
 position = Vector2(76, 364)
+
+[node name="EnemySpawner" parent="." instance=ExtResource("4_4r3nb")]

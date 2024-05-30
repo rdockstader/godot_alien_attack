@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://br46wyrsljtd1"]
+
+[ext_resource type="Script" path="res://scripts/enemy_spawner.gd" id="1_ql1g2"]
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource("1_ql1g2")
+
+[node name="SpawnPositions" type="Node2D" parent="."]
+
+[node name="spawnPos_01" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1350, 50)
+
+[node name="spawnPos_02" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1350, 175)
+
+[node name="spawnPos_03" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1350, 300)
+
+[node name="spawnPos_04" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1350, 425)
+
+[node name="spawnPos_05" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1350, 550)
+
+[node name="spawnPos_06" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1350, 675)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="enemies" type="Node" parent="."]
