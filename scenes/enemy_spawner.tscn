@@ -8,25 +8,26 @@ script = ExtResource("1_ql1g2")
 [node name="SpawnPositions" type="Node2D" parent="."]
 
 [node name="spawnPos_01" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(1350, 50)
+position = Vector2(1350, 100)
 
 [node name="spawnPos_02" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(1350, 175)
+position = Vector2(1350, 205)
 
 [node name="spawnPos_03" type="Marker2D" parent="SpawnPositions"]
 position = Vector2(1350, 300)
 
 [node name="spawnPos_04" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(1350, 425)
+position = Vector2(1350, 395)
 
 [node name="spawnPos_05" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(1350, 550)
+position = Vector2(1350, 490)
 
 [node name="spawnPos_06" type="Marker2D" parent="SpawnPositions"]
-position = Vector2(1350, 675)
+position = Vector2(1350, 585)
+
+[node name="spawnPos_07" type="Marker2D" parent="SpawnPositions"]
+position = Vector2(1350, 680)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
-
-[node name="enemies" type="Node" parent="."]

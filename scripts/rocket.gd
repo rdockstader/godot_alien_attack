@@ -15,6 +15,5 @@ func _on_screen_exited():
 	queue_free()
 
 func _on_area_entered(area):
-	if(area.name == 'Enemy'):
-		queue_free()
-		area.die()
+	queue_free()
+	area.die(true)

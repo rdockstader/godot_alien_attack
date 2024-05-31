@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal took_damage
+
 # constants
 const MOVE_SPEED = 1000
 const ROCKET_OFFSET = 80
@@ -33,3 +35,9 @@ func shoot():
 	rocket_instance.global_position = global_position
 	rocket_instance.global_position.x += ROCKET_OFFSET
 	rocket_node.add_child(rocket_instance)
+	
+func take_damage():
+	emit_signal("took_damage")
+	
+func die():
+	queue_free()
